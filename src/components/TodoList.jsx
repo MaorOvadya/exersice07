@@ -1,30 +1,20 @@
 import React from 'react'
 import TodoItem from '@/components/TodoItem'
 
-function TodoList({ todos, setTodos }) {
+function TodoList({ todos, handleChange, deleteTodo }) {
 
-    const handleChange = (id) => {
-        setTodos((prevState) => {
-            return prevState.map(todo => {
-                if(todo.id === id){
-                    return {
-                        ...todo,
-                        completed: !todo.completed
-                    }
-                }
-
-                return todo
-            })
-        })
-    }
-
-  return (
-    <ul>
-        {todos?.map((todo) =>
-            <TodoItem key={todo.id} todoItem={todo} handleChange={handleChange} />
-        )}
-    </ul>
-  )
+    return (
+        <ul>
+            {todos?.map((todo) =>
+                <TodoItem
+                    key={todo.id}
+                    todoItem={todo}
+                    handleChange={handleChange}
+                    deleteTodo={deleteTodo}
+                />
+            )}
+        </ul>
+    )
 }
 
 export default TodoList
