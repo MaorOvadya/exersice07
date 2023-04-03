@@ -4,25 +4,25 @@ import { v4 as uuidv4 } from 'uuid'
 import InputTodo from '@/components/InputTodo'
 import TodoList from '@/components/TodoList'
 
-import { todos as todosData } from '@/data/todoData'
+// import { todos as todosData } from '@/data/todoData'
 
 function TodoApp() {
-    const [todos, setTodos] = useState(todosData)
+    // const [todos, setTodos] = useState(todosData)
 
-    const handleChange = (id) => {
-        setTodos((prevState) => {
-            return prevState.map(todo => {
-                if (todo.id === id) {
-                    return {
-                        ...todo,
-                        completed: !todo.completed
-                    }
-                }
+    // const handleChange = (id) => {
+    //     setTodos((prevState) => {
+    //         return prevState.map(todo => {
+    //             if (todo.id === id) {
+    //                 return {
+    //                     ...todo,
+    //                     completed: !todo.completed
+    //                 }
+    //             }
 
-                return todo
-            })
-        })
-    }
+    //             return todo
+    //         })
+    //     })
+    // }
 
     const deleteTodo = (id) => {
         setTodos((prevState) => {
@@ -46,8 +46,8 @@ function TodoApp() {
         <>
             <InputTodo addTodo={addTodo} />
             <TodoList
-                todos={todos}
-                handleChange={handleChange}
+                // todos={todos}
+                // handleChange={handleChange}
                 deleteTodo={deleteTodo}
             />
         </>

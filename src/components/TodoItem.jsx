@@ -8,7 +8,7 @@ function TodoItem({ todoItem, handleChange, deleteTodo }) {
                 checked={todoItem.completed}
                 onChange={() => handleChange(todoItem.id)}
             />
-            <span style={ todoItem.completed ? { textDecoration: "line-through"}: null}>
+            <span style={todoItem.completed ? { textDecoration: "line-through" } : null}>
                 {todoItem.title}
             </span>
             <button onClick={() => deleteTodo(todoItem.id)}>Delete</button>
