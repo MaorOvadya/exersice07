@@ -11,7 +11,13 @@
     ...
     ├── src
     │    ├── components
+    |    |      ├── Header.jsx
+    |    |      ├── InputTodo.jsx
     │    │      └── TodoApp.jsx
+    │    │      └── TodoItem.jsx
+    │    │      └── TodoList.jsx
+    │    ├── data
+    |    |      └── todoData.js
     |    ├── App.jsx
     │    ├── main.jsx
     ...
